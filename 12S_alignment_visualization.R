@@ -63,7 +63,10 @@ ggplot(seq_df_long, aes(x = position, y = fct_rev(full_name))) +
 # distance, but even spacing requires some messing around with image dimensions
 
 # save the plot
-ggsave("/Users/conorokane/Desktop/MSU/figures and data visualization/12S_alignment_visualization.png", dpi=600, height = 24, width = 18)
+ggsave("./12S_alignment_visualization.png", dpi=600, height = 24, width = 18)
+
+# minor adjustments to the axes, additional titles, and layout of the design
+# were then made in Adobe Illustrator with this file.
 
 
 #-------------
@@ -71,5 +74,5 @@ ggsave("/Users/conorokane/Desktop/MSU/figures and data visualization/12S_alignme
 clean_names <- rev(names(nt_sequences)) %>%
   sub("^[^_]+_", "", .) %>%     # Remove identifier before underscore
   gsub("_", " ", .)             # Replace underscore with space
-writeLines(clean_names, "/Users/conorokane/Desktop/MSU/figures and data visualization/species_labels.txt")
+writeLines(clean_names, "./species_labels.txt")
 
