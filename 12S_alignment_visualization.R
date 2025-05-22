@@ -1,7 +1,6 @@
 # 12S Great Lakes Fish Alignment Visual
 
 # libraries
-#library(ggmsa)
 library(Biostrings)
 library(msa)
 library(tidyverse)
